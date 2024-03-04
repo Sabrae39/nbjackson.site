@@ -4,7 +4,7 @@ const PostBody = ({ post }) => {
   const { content } = post.fields
 
   return (
-    <div className='mx-auto prose'>
+    <div className='mx-a prose'>
       <RichText content={content} />
     </div>
   )

@@ -2,7 +2,7 @@ import { client } from '@/lib/contentful/client'
 import PostCard from '@/components/posts/PostCard'
 
 const Posts = ({ posts }) => {
-  console.log(posts)
+  // console.log(posts)
   return (
     <section className='section'>
       <div className='container'>

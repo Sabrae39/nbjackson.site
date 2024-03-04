@@ -1,12 +1,12 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
-@layer base {
+@layer base { 
   #__next {
     @apply contents;
   }
-
+   
   html {
     @apply h-full scroll-smooth antialiased;
   }
@@ -29,5 +29,5 @@
 
   .title {
     @apply font-bold tracking-tight;
-  }
+  } 
 }
