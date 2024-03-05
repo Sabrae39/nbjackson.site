@@ -4,24 +4,26 @@ import ContentfulImage from '../ui/ContentfulImage'
 const HeaderCarousel= ({carouselPhotos}) => {
     //const { title, slug, excerpt, coverImage, author, pubDate } = post.fields
     //const {id, url, width, height} = carouselPhotos.fields
-    console.log(carouselPhotos[0].fields)
+    console.log('carousel '+ carouselPhotos[0].fields.photo.fields.file.url)
+
+
     return (
-        <div>
-            <h1>I AM HERE</h1>
+      <div>
         <Carousel> 
-          {carouselPhotos.map(({id, url, width, height}) => (
+          {carouselPhotos.map((photo, i) => (
           <ContentfulImage
-          key={id}
-          src={url}
-          width={width}
-          height={height}
+          key={photo.fields.name}
+          alt={photo.fields.name}
+          src={photo.fields.photo.fields.file.url}
+          width={photo.fields.photo.fields.file.details.image.width}
+          height={photo.fields.photo.fields.file.details.image.height}
           rel="preload"
           priority="true"
-      />
-        ))} 
+          />
+          ))} 
         </Carousel>
       </div>
     );
-  };
+};
   
-  export default HeaderCarousel;
+export default HeaderCarousel;
